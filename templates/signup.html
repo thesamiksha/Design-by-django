@@ -1,0 +1,143 @@
+{% extends "base.html"%}
+{% block title%}signup{% endblock title%}
+{% block body%}
+<div class = "head ">
+<div class = "container-fluid bg-dark p-5 "  >
+ <div class = "navbar ">
+    <div class = "txt">
+    <h4><font color="EAEBF1"> Online Store Help Center</font></h4>
+    </div>
+    
+      <nav>
+        <ul class = "nav">
+            <li  > <a class = 'nav-link  mx-3' href="/"><font color="EAEBF1"><h5>Home</h5></a></font></li>
+            <li  > <a class = 'nav-link  mx-3' href="/signin"><font color="EAEBF1"><h5>Sign In</h5></a></font></li>
+            <li  > <a class = 'nav-link  mx-3' href="/signup"><font color="EAEBF1"><h5>Sign Up</h5></a></font></li>
+        </ul>
+      </nav>  
+ </div>
+</div>
+<div class = 'signup'>
+  <h4 class = 'text-center mt-5'> SignUp </h4>
+  <form action = '/signup' method = 'POST'>
+    {% csrf_token %}
+    <div class = 'form1 bg-dark '>
+      <style>
+        .form1 {
+          width: 500px;
+          margin-top:0;
+          margin-button: auto;
+          margin-left: auto;
+          margin-right: auto;
+          
+          
+          border: 3px solid #73AD21;
+        }
+      </style>
+    <div class=" cl1 mb-2">
+      <style>
+        .cl1{
+          margin:auto;
+          text-align: center;
+          input-align:center;
+        }
+      </style>
+      <style>
+        input[type="text"] {
+          display: block;
+          margin : 0 auto;
+          
+        }
+        </style>
+        <style>
+          input[type="password"] {
+            display: block;
+            margin : 0 auto;
+          }
+          </style>
+      <label for="username" class="form-label-center  mt-5"><font color="EAEBF1">Username</font></label>
+      <br>
+      <input type="text" style="width: 200px;" class="form-control" id="username" name ="username" placeholder="Create your username(only letters and numbers)"Required>
+      
+    </div>
+    <div class = ' cl1 mb-2'>
+      <label for = 'fname'><font color="EAEBF1">FirstName</font></label>
+      <br>
+      <input type = "text" style="width: 200px;" class = "form-control" id = "fname" name = 'fname' placeholder = "Enter your first name"Required> </input>
+    </div>
+    <div class = 'cl1 mb-2'>
+      <label for = "lname"><font color="EAEBF1">LastName</font></label>
+      <br>
+      <input type = "text" style="width: 200px;" class = "form-control"id = "lname" name = "lname" placeholder = "Enter your last name"Required>
+    
+    </div>
+    <div class = 'cl1 mb-2'>
+      <label for = "email"><font color="EAEBF1">Email</font></label>
+      <br>
+      <input type = "email" style="width: 200px;" class = "form-control"id = "email" name = "email" placeholder = "Enter your email-address"Required>
+    
+    </div>
+    <div class = 'cl1 mb-2'>
+    <label for = "pass1"><font color="EAEBF1">Password</font></lable>
+      <br>
+      <input type = "password" style="width: 200px;" class = "form-control" id = "pass1" name = "pass1" placeholder="Enter your password"Required>
+    </div> 
+    <div class = 'cl1 mb-2'>
+      <label for = "pass2"><font color="EAEBF1">Confirm Password</font></label>
+      <br>
+      <input type = "password" style="width: 200px;" class = "form-control" id ="pass2" name = "pass2" palceholder = "Confirm your Password"Required>
+    </div>
+    <button type = "submit" class="btn btn-primary mb-5">SignUp</button>
+    <style>
+      button[type="submit"] {
+        display: block;
+        margin : 0 auto;
+      }
+      </style>
+      <style>
+        input[type="email"] {
+          display: block;
+          margin : 0 auto;
+          
+        }
+        </style>
+  </div>
+  </form>
+</div>
+<!-------------- for more details------------>
+<div class="row row-cols-1 row-cols-cols-sm-2 row-cols-md-4 g-2 mt-5 ">
+  
+  <div class = "container  " style = "background:#E8E8E8">
+    <p class = "text-center mt-5"><strong> About Us</strong></p>
+    <a class="nav-link text-center st1  "  href="/ourstore">About Online Store</a>
+    <a class ="nav-link text-center st1 " href="careers">Careers</a>
+  <style>
+    .st1:hover{
+      color:blue;
+    }
+  </style>
+</div>
+<div class = "container" style = "background:#E8E8E8">
+  <p class = "text-center mt-5" ><strong> Information</strong></p>
+  <a class="nav-link text-center st1  "  href="/FAQ">FAQ</a>
+  <a class ="nav-link text-center st1 " href="/refundpolicy">Return & Refund Policy</a>
+  <a class="nav-link text-center st1  "  href="/terms">Terms & Conditions</a>
+  
+</div>
+<div class = "container"style = "background:#E8E8E8">
+  <p class = "text-center st1" style = "cursor:pointer">  </p>
+</div>
+<div class = "container "style = "background:#E8E8E8">
+  <p class = "text-center mt-5"><strong> Customer Support</strong></p>
+  <p class = "text-center my-0 px-0 ">Call us at <font color="132371" style = "cursor:pointer"><b>  989898345</b></font></p>
+  <p class = "text-center my-0 px-0">Online store Customer Service Hours:</p>
+  <p class = "text-center my-0 px-0">Sunday-Saturday: 9AM-6PM</p>
+  <p class = "text-center my-0 px-0">You can also mail us at</p>
+  <p class = "text-center my-0 px-0"><font color="132371"style = "cursor:pointer"><b>onlinestore1@gmail.com</b></font></p>
+  
+</div>
+</div>
+</div>
+
+
+{% endblock body%}
